@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Navbar = () => {
+const ExtraSection = () => {
     return (
         <div>
-            Hello bangla
+           
         </div>
     );
 };
 
-export default Navbar;
+export default ExtraSection;
