@@ -12,17 +12,17 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center sm:text-left">
 
           {/* Contact Info */}
-          <div className="pl-10">
+          <div className="pl-0 lg:pl-20">
             <h2 className="text-white text-lg font-semibold mb-4 ">
               Contact Info
             </h2>
             <p className="mb-1">Email: support@suncart.com</p>
-            <p className="mb-1">Phone: +880 1234-567890</p>
+            <p className="mb-1">Phone: +880 1602-514628</p>
             <p>Address: Dhaka, Bangladesh</p>
           </div>
 
           {/* Social Links */}
-          <div className="pl-0 md:pl-0 lg:pl-50">
+          <div className="pl-0 md:pl-0 lg:pl-60">
             <h2 className="text-white text-lg font-semibold mb-4 pl-3">
               Follow Us
             </h2>
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
 
           {/* Privacy Policy */}
-          <div className="pl-0 md:pl-10 lg:pl-40">
+          <div className="pl-0 md:pl-0 lg:pl-40">
             <h2 className="text-white text-lg font-semibold mb-4">
               Privacy Policy
             </h2>
