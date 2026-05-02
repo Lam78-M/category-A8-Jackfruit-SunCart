@@ -1,19 +1,32 @@
 'use client'
+import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
 const RegisterPage = () => {
-      
-      const {register, handleSubmit, formState:{errors}} = useForm()
+const {register, handleSubmit, formState:{errors}} = useForm()
 
-  const handleRegisterInfo = (data)=>{
-    console.log(data, "data")
-  }
-  console.log(errors, "errors")
-       
- 
+const handleRegisterInfo = async(data)=>{ console.log(data, "data")
+const {email, name, photo, password} = data;
+console.log( photo, email, password)
 
+const {data:res, error} = await authClient.signUp.email({
+      name: name, // required
+    email: email, // required
+    password: password, // required
+    image: photo,
+    callbackURL: "/",
+});
+   console.log(res, error) 
+   if(error){
+    alert(error.message)
+   }
+   if(res){
+    alert("Signup Successfull")
+   }
+
+ };
     return (
      <div className="mx-auto min-h-[85vh] w-full max-w-4xl px-4 mt-10 flex justify-center items-center 
 bg-gradient-to-br from-sky-200 via-yellow-50 to-orange-200">
@@ -27,7 +40,7 @@ bg-gradient-to-br from-sky-200 via-yellow-50 to-orange-200">
 </fieldset>
 <fieldset className="fieldset">
   <legend className="fieldset-legend text-[16px]">Photo</legend>
-  <input type="photo url" {...register("name",{required: "Photo field is required"})} className="input" placeholder="Type your photo url" />
+  <input type="photo url" {...register("photo",{required: "Photo field is required"})} className="input" placeholder="Type your photo url" />
   { errors.photo && <p className='text-red-500'>{errors.photo.message}</p>}
 </fieldset>
  <fieldset className="fieldset">
