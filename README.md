@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌞 SunCart – Summer Essentials Store
 
-## Getting Started
+## 📌 Project Overview
 
-First, run the development server:
+**SunCart** is a modern summer-themed eCommerce web application where users can explore and purchase seasonal products like sunglasses, outfits, skincare items, and accessories. The platform focuses on a clean UI, smooth user experience, and secure authentication.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Purpose
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The goal of this project is to build a fully responsive, authentication-based eCommerce platform using modern web technologies like Next.js. It demonstrates routing, protected pages, UI design, and user interaction in a real-world scenario.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Live URL
 
-To learn more about Next.js, take a look at the following resources:
+🔗 https://your-live-link.vercel.app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Technologies Used
 
-## Deploy on Vercel
+* **Next.js (App Router)**
+* **Tailwind CSS**
+* **DaisyUI**
+* **React Icons**
+* **React Hook Form**
+* **BetterAuth (Authentication)**
+* **Animate.css (Animations)**
+* **Unsplash (Images)**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✨ Key Features
+
+### 🔐 Authentication System
+
+* Email & Password Login/Register
+* Google Social Login
+* Error handling with messages/toast
+* Redirect after login
+
+### 🏠 Home Page
+
+* 🌅 Hero Section (Summer Sale Banner)
+* 🔥 Popular Products (3 items from JSON)
+* 🌿 Summer Care Tips Section
+* 🏷️ Top Brands Section
+
+### 🛍️ Product System
+
+* Static JSON with at least 6 products
+* Product cards with image, price, rating
+* Detailed product page
+
+### 🔒 Protected Routes
+
+* Product Details page requires login
+* Redirect to login if not authenticated
+* Redirect back after login
+
+### 👤 User Profile (Bonus)
+
+* View user information (Name, Email, Photo)
+* Update profile feature
+
+### 📱 Responsive Design
+
+* Fully responsive for Mobile, Tablet & Desktop
+
+### 🎨 UI/UX
+
+* Clean and modern summer theme
+* Smooth animations using Animate.css
+
+---
+
+## 📂 Project Structure
+
+* **App Router (Next.js)**
+* Persistent Navbar & Footer
+* Route-based pages
+* JSON-based product data
+
+---
+
+## 🔑 Environment Variables
+
+Sensitive keys (e.g., authentication config) are stored securely using environment variables (.env.local).
+
+---
+
+## 📦 NPM Packages Used
+
+* next
+* react
+* tailwindcss
+* daisyui
+* react-icons
+* react-hook-form
+* better-auth
+* animate.css
+
+## 📌 GitHub Repository
+
+🔗 https://github.com/your-username/suncart
+
+---
+## 👨‍💻 Author
+
+**Your Name**
+
+---
+
+## 📜 License
+
+This project is created for learning and assignment purposes.
+
+---

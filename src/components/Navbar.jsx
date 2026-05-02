@@ -33,7 +33,7 @@ const Navbar = () => {
     <a className="ml-5 flex items-center gap-2  text-2xl font-bold text-orange-400 bg-[#00000000]"> <IoSunny className='text-orange-400 text-3xl' />SUN <span className='text-gray-800  font-bold'>CART</span></a>
   </div>
   <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 text-lg text-black">
+    <ul className="menu menu-horizontal px-1 text-lg text-gray-800">
  <div className='flex gap-5 '>
      <div className='flex items-center gap-1 hover:text-orange-400'>
        <FaHome  />
@@ -51,8 +51,19 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="flex flex-row md:navbar-end lg:navbar-end gap-3 mr-5">
-    <a className="px-6 border font-semibold border-orange-500 text-orange-500 hover:bg-orange-400 hover:text-white  py-2 rounded flex items-center gap-1">Login <LuLogIn className='text-lg' /></a>
-  
+ <Link href={'/login'}>
+    <button className="
+  btn 
+  bg-white 
+  text-orange-500 
+  border border-orange-500 
+  hover:bg-orange-500 
+  hover:text-white 
+  transition-all duration-300
+">
+  Login with Email
+</button>
+ </Link>
   
   </div>
 </div>
