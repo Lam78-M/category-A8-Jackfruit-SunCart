@@ -34,7 +34,7 @@ const Navbar = () => {
     </div>
     <div className='flex items-center gap-1 hover:text-orange-400'>
       <FaRegUser />
-       <Link href={'/'}>My Profile</Link>
+       <Link href={'/myprofile'}>My Profile</Link>
      </div>
       </ul>
     </div>
@@ -53,7 +53,7 @@ const Navbar = () => {
     </div>
      <div className='flex items-center gap-1 hover:text-orange-400'>
       <FaRegUser />
-       <Link href={'/'}>My Profile</Link>
+       <Link href={'/myprofile'}>My Profile</Link>
      </div>
  </div>
     </ul>
