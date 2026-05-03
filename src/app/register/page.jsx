@@ -1,11 +1,14 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const RegisterPage = () => {
 const {register, handleSubmit, formState:{errors}} = useForm()
+
+   const [isShowPassword, setIsShowPassword] = useState(true);
 
 const handleRegisterInfo = async(data)=>{ console.log(data, "data")
 const {email, name, photo, password} = data;
@@ -49,12 +52,14 @@ bg-gradient-to-br from-sky-200 via-yellow-50 to-orange-200">
   { errors.email && <p className='text-red-500'>{errors.email.message}</p>}
 </fieldset>
     
-    <fieldset className="fieldset">
-  <legend className="fieldset-legend text-[16px]">Password</legend>
-  <input type="password" {...register("password",{required: "Password field is required"})} className="input" placeholder="Type your password" />
-  { errors.password && <p className='text-red-500'>{errors.password.message}</p>}
-</fieldset>
+       <fieldset className="fieldset relative cursor-pointer">
+     <legend className="fieldset-legend text-[16px]">Password</legend>
+     <input type={isShowPassword ? "text": "password"} {...register("password",{required: "Password field is required"})} className="input" placeholder="Type your password" />
+     <span className='absolute right-2 top-4' onClick={()=>setIsShowPassword(!isShowPassword)}>{ isShowPassword ? <FaEye className='text-lg text-orange-600'/>: <FaEyeSlash className='text-lg text-orange-600'/>}</span>
+     { errors.password && <p className='text-red-500'>{errors.password.message}</p>}
+   </fieldset>
 
+<Link href={"/login"}>
 <button className="
   btn 
   bg-orange-400 
@@ -69,7 +74,7 @@ bg-gradient-to-br from-sky-200 via-yellow-50 to-orange-200">
   hover:shadow-orange-400/50 
 ">
   Register
-</button>
+</button></Link>
 
 </form>
   

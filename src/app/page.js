@@ -3,6 +3,7 @@
 import ExtraSection from "@/components/ExtraSection";
 import Image from "next/image";
 import { GiFire } from "react-icons/gi";
+import { TbMarquee } from "react-icons/tb";
 
 export default function SummerSaleBanner() {
   const products = [
@@ -20,7 +21,7 @@ export default function SummerSaleBanner() {
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-yellow-300/20 rounded-full pointer-events-none" />
         <div className="absolute -bottom-16 -left-16 w-60 h-60 bg-orange-400/10 rounded-full pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+        <div className="animate__animated animate__bounceInRight animate_slow   max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
 
           {/* Left — Promo Card */}
           <div
@@ -92,7 +93,14 @@ export default function SummerSaleBanner() {
           </div>
 
           {/* Right — Product Cards */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 flex-1 w-full">
+         
+
+        </div> 
+      </section>
+
+   
+      <div className=" mt-10 p-4 bg-pink-500">
+         <div className="container mx-auto grid grid-cols-2 md:grid-cols-2  lg:grid-cols-4 gap-4 flex-1 w-full">
             {products.map((p) => (
               <div
                 key={p.label}
@@ -115,9 +123,7 @@ export default function SummerSaleBanner() {
               </div>
             ))}
           </div>
-
-        </div>
-      </section>
+      </div>
 
       <ExtraSection />
     </>

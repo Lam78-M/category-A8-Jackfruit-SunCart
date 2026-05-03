@@ -1,0 +1,136 @@
+{
+    "products" : [
+  {
+    "id": 1,
+    "name": "Stylish Sunglasses",
+    "brand": "RaySun",
+    "price": 1200,
+    "rating": 4.5,
+    "stock": 25,
+    "description": "UV protected stylish sunglasses perfect for summer outings.",
+    "image": "/assets/andres-hernandez-ouAyz-zRMTw-unsplash.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Summer Outfit Set",
+    "brand": "CoolWear",
+    "price": 2500,
+    "rating": 4.3,
+    "stock": 15,
+    "description": "Lightweight and breathable summer outfit for hot weather.",
+    "image": "/assets/moonstarious-project-wl2TODALiAY-unsplash.jpg",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "Beach Accessories Kit",
+    "brand": "SeaFun",
+    "price": 1800,
+    "rating": 4.6,
+    "stock": 20,
+    "description": "Complete beach accessories including towel, bag, and mat.",
+    "image": "/assets/nataliya-melnychuk-I-6Ap7JXHq8-unsplash.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 4,
+    "name": "Hydrating Moisturizer",
+    "brand": "SkinGlow",
+    "price": 900,
+    "rating": 4.4,
+    "stock": 30,
+    "description": "Keeps your skin hydrated and fresh during summer.",
+    "image": "/assets/poko-skincare-QTGB4D8kDoc-unsplash.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 5,
+    "name": "UV Protection Umbrella",
+    "brand": "ShadePro",
+    "price": 700,
+    "rating": 4.2,
+    "stock": 18,
+    "description": "Strong umbrella with UV protection for sunny and rainy days.",
+    "image": "/assets/malik-shibly-9tVSG2wJfNg-unsplash.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 6,
+    "name": "Summer Cap",
+    "brand": "CapZone",
+    "price": 500,
+    "rating": 4.1,
+    "stock": 40,
+    "description": "Comfortable cap to protect from sunlight.",
+    "image": "/assets/yuri-krupenin-yRLgZ7IqVv8-unsplash.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 7,
+    "name": "SPF 50 Sunscreen",
+    "brand": "SunCare",
+    "price": 1100,
+    "rating": 4.7,
+    "stock": 35,
+    "description": "High protection sunscreen suitable for all skin types.",
+    "image": "/assets/isaac-wolff-EVLP4ShgbjE-unsplash.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 8,
+    "name": "Flip Flops Sandals",
+    "brand": "WalkEasy",
+    "price": 800,
+    "rating": 4.3,
+    "stock": 22,
+    "description": "Comfortable and lightweight sandals for beach and casual wear.",
+    "image": "/assets/david-trinks-glfcz6er-nA-unsplash.jpg",
+    "category": "Footwear"
+  },
+   {
+      "id": 9,
+      "name": "Insulated Water Bottle",
+      "brand": "HydroMax",
+      "price": 850,
+      "rating": 4.6,
+      "stock": 25,
+      "description": "Stay hydrated all day with this insulated stainless steel water bottle. Keeps drinks cold for up to 24 hours and hot for 12 hours.",
+      "image": "/assets/joan-tran-reEySFadyJQ-unsplash.jpg",
+      "category": "Hydration"
+    } ,
+    {
+      "id": 10,
+      "name": "Sports Water Bottle",
+      "brand": "FitLife",
+      "price": 450,
+      "rating": 4.3,
+      "stock": 40,
+      "description": "Lightweight and durable sports bottle with easy squeeze design, perfect for gym and outdoor activities.",
+      "image": "/assets/brandon-atchison-40oNjij67qQ-unsplash.jpg",
+      "category": "Fitness"
+    },
+     {
+      "id": 11,
+      "name": "Glass Water Bottle",
+      "brand": "PureSip",
+      "price": 650,
+      "rating": 4.5,
+      "stock": 18,
+      "description": "Eco-friendly glass water bottle with protective silicone sleeve. Ideal for clean and safe drinking.",
+      "image": "/assets/callum-shaw-bPVumyN7-yk-unsplash.jpg",
+      "category": "Eco"
+    },
+      {
+      "id": 12,
+      "name": "Silicone Ice Cube Tray",
+      "brand": "CoolFreeze",
+      "price": 220,
+      "rating": 4.4,
+      "stock": 60,
+      "description": "Flexible silicone ice tray that makes it easy to pop out ice cubes. Perfect for daily use at home.",
+      "image": "/assets/fatemeh-habibyar-dildiRfkSg8-unsplash.jpg",
+      "category": "Kitchen"
+    }
+]
+}

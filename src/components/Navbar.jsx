@@ -1,10 +1,18 @@
+'use client'
+import { authClient } from '@/lib/auth-client';
 import Link from 'next/link';
 import React from 'react';
 import { AiFillProduct } from 'react-icons/ai';
 import { FaHome, FaRegUser } from 'react-icons/fa';
 import { IoSunny } from "react-icons/io5";
-import { LuLogIn } from 'react-icons/lu';
+
+import Image from 'next/image';
+;
 const Navbar = () => {
+
+  const { data: session, isPending } = authClient.useSession();
+  const user = session?.user
+  console.log(user, isPending, "user")
     return (
         <div className='bg-base-100 shadow-sm w-full'>
             <div className="navbar ">
@@ -22,7 +30,7 @@ const Navbar = () => {
      </div>
        <div className='flex items-center gap-1 hover:text-orange-400'>
           <AiFillProduct />
-      <Link href={'/'}>Products</Link>
+      <Link href={'/products'}>Products</Link>
     </div>
     <div className='flex items-center gap-1 hover:text-orange-400'>
       <FaRegUser />
@@ -41,7 +49,7 @@ const Navbar = () => {
      </div>
     <div className='flex items-center gap-1 hover:text-orange-400'>
           <AiFillProduct />
-      <Link href={'/'}>Products</Link>
+      <Link href={'/products'}>Products</Link>
     </div>
      <div className='flex items-center gap-1 hover:text-orange-400'>
       <FaRegUser />
@@ -50,24 +58,54 @@ const Navbar = () => {
  </div>
     </ul>
   </div>
-  <div className="flex flex-row md:navbar-end lg:navbar-end gap-3 mr-5">
- <Link href={'/login'}>
-    <button className="
-  btn 
-  bg-white 
-  text-orange-500 
-  border border-orange-500 
-  hover:bg-orange-500 
-  hover:text-white 
-  transition-all duration-300
-">
-  Login with Email
-</button>
- </Link>
-  
+
+
+
+
+  <div className="flex sm:flex-col md:flex-row lg:flex-row navbar-end md:navbar-end lg:navbar-end gap-3 mr-5">
+         {isPending ? (<span className="loading loading-spinner text-secondary"></span>) :  user ? (
+    <>
+      <Image
+        src={user?.image || "/assets/user.png"}
+        alt="user avatar"
+        width={40}
+        height={40}
+        className="rounded-full object-cover  "
+      />
+
+      <button className=" btn 
+          bg-white 
+          text-orange-500 
+          border border-orange-500 
+          hover:bg-orange-500 
+          hover:text-white 
+          transition-all duration-300  " onClick={ async()=>await authClient.signOut()}>Logout</button>
+    </>
+  ) : (
+    <Link href="/login">
+      <button
+        className="
+          btn 
+          bg-white 
+          text-orange-500 
+          border border-orange-500 
+          hover:bg-orange-500 
+          hover:text-white 
+          transition-all duration-300
+        "
+      >
+        Login with Email
+      </button>
+    </Link>
+  )}
   </div>
-</div>
-        </div>
+
+
+
+
+
+</div>  
+ </div>
     );
 };
 
