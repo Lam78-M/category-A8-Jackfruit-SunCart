@@ -1,0 +1,61 @@
+{
+    "homeside" : [
+  {
+    "id": 1,
+    "name": "Stylish Sunglasses",
+    "brand": "RaySun",
+    "price": 400,
+    "rating": 4.5,
+    "stock": 25,
+    "description": "UV protected stylish sunglasses perfect for summer outings.",
+    "image": "/assets/andres-hernandez-ouAyz-zRMTw-unsplash.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Summer Outfit Set",
+    "brand": "CoolWear",
+    "price": 500,
+    "rating": 4.3,
+    "stock": 15,
+    "description": "Lightweight and breathable summer outfit for hot weather.",
+    "image": "/assets/moonstarious-project-wl2TODALiAY-unsplash.jpg",
+    "category": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "Beach Accessories Kit",
+    "brand": "SeaFun",
+    "price": 800,
+    "rating": 4.6,
+    "stock": 20,
+    "description": "Complete beach accessories including towel, bag, and mat.",
+    "image": "/assets/nataliya-melnychuk-I-6Ap7JXHq8-unsplash.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 4,
+    "name": "Hydrating Moisturizer",
+    "brand": "SkinGlow",
+    "price": 900,
+    "rating": 4.4,
+    "stock": 30,
+    "description": "Keeps your skin hydrated and fresh during summer.",
+    "image": "/assets/poko-skincare-QTGB4D8kDoc-unsplash.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 5,
+    "name": "UV Protection Umbrella",
+    "brand": "ShadePro",
+    "price": 700,
+    "rating": 4.2,
+    "stock": 18,
+    "description": "Strong umbrella with UV protection for sunny and rainy days.",
+    "image": "/assets/malik-shibly-9tVSG2wJfNg-unsplash.jpg",
+    "category": "Accessories"
+  }
+  
+
+]
+}

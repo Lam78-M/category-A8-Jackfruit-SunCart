@@ -2,20 +2,14 @@
 
 import ExtraSection from "@/components/ExtraSection";
 import Image from "next/image";
-import { GiFire } from "react-icons/gi";
-import { TbMarquee } from "react-icons/tb";
+
+import PopularCard from "@/components/PopularCard";
+import { BsFillEmojiSunglassesFill } from "react-icons/bs";
 
 export default function SummerSaleBanner() {
-  const products = [
-    { src: "/assets/sunglass.jpg", label: "Sunglasses", discount: "50% OFF" },
-    { src: "/assets/cap.jpg", label: "Caps", discount: "40% OFF" },
-    { src: "/assets/sunsreen.jpg", label: "Sunscreen", discount: "35% OFF" },
-    { src: "/assets/umbrella2.jpg", label: "Umbrella", discount: "45% OFF" },
-  ];
-
   return (
     <>
-      <section className="w-full bg-gradient-to-br from-amber-50 via-orange-100 to-amber-100 py-14 px-6 mt-3 relative overflow-hidden">
+      <section className="w-full bg-gradient-to-br from-amber-50 via-orange-100 to-amber-100 py-14 px-6 mt-3 mb-50 relative overflow-hidden">
 
         {/* Background decorative circles */}
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-yellow-300/20 rounded-full pointer-events-none" />
@@ -94,37 +88,83 @@ export default function SummerSaleBanner() {
 
           {/* Right — Product Cards */}
          
+{/* Right — Product Cards */}
+<div className="grid grid-cols-2 md:grid-cols-3 gap-5 w-full">
 
+  {/* Beach */}
+  <div className="row-span-2 relative rounded-2xl  bg-blue-300 overflow-hidden h-[330px]">
+    <Image src="/assets/tavia-b-5_1JUIOjXKU-unsplash.jpg" alt="beach" fill className="object-cover" />
+    <span className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
+      STYLE
+    </span>
+  </div>
+
+  {/* Sunglasses */}
+  <div className="relative rounded-2xl bg-blue-300 overflow-hidden h-[160px]">
+    <Image src="/assets/they-callme-zeus-Mfwla4WVG6s-unsplash.jpg" alt="sunglasses" fill className="object-cover" />
+    <span className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
+     SUN
+    </span>
+  </div>
+
+  {/* Ice Cream */}
+  <div className="relative rounded-2xl bg-blue-300 overflow-hidden h-[160px]">
+    <Image src="/assets/jason-pischke-xVSyLQxEprw-unsplash.jpg" alt="ice cream" fill className="object-cover" />
+    <span className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
+      BEACH
+    </span>
+  </div>
+
+  {/* Summer Food */}
+<div className="col-span-2 relative rounded-2xl overflow-hidden h-[150px] flex items-center justify-center">
+
+  {/* Gradient Background */}
+  <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-amber-500 to-yellow-300" />
+
+  {/* Glass overlay */}
+  <div className="absolute inset-0 backdrop-blur-[6px] bg-white/10" />
+
+  {/* Decorative glow */}
+  <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/20 rounded-full blur-2xl" />
+  <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-orange-500/20 rounded-full blur-2xl" />
+
+  {/* Content */}
+  <div className="relative z-10 text-center px-4">
+    <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight drop-shadow-lg flex  items-center gap-3">
+      Your Summer <BsFillEmojiSunglassesFill className="text-yellow-300" />
+   
+      Our Services
+    </h2>
+
+    <p className="text-white text-sm mt-1 tracking-wide">
+      Stay cool, shop smart & enjoy the season
+    </p>
+  </div>
+
+</div>
+
+  {/* Flip Flops */}
+  <div className="relative rounded-2xl bg-blue-300 overflow-hidden  h-[160px]">
+    <Image src="/assets/warren-umoh-Me7y3DYfIBE-unsplash.jpg" alt="flip flops" fill className="object-cover" />
+    <span className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
+      VIBES
+    </span>
+  </div>
+
+  {/* New Card (Fix empty space) */}
+  <div className="relative rounded-2xl bg-blue-300 overflow-hidden  h-[160px]">
+    <Image src="/assets/roman-davayposmotrim-8Xzslh4ku4E-unsplash.jpg" alt="sunscreen" fill className="object-cover" />
+    <span className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
+      UP COMMING
+    </span>
+  </div>
+
+</div>
         </div> 
       </section>
 
-   
-      <div className=" mt-10 p-4 bg-pink-500">
-         <div className="container mx-auto grid grid-cols-2 md:grid-cols-2  lg:grid-cols-4 gap-4 flex-1 w-full">
-            {products.map((p) => (
-              <div
-                key={p.label}
-                className="bg-gray-50 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition group"
-              >
-                <div className="relative h-[220px] w-full">
-                  <Image
-                    src={p.src}
-                    alt={p.label}
-                    fill
-                    className="object-cover group-hover:scale-105 transition duration-300"
-                  />
-                  <span className="absolute top-2 left-2 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
-                    {p.discount}
-                  </span>
-                </div>
-                <div className="px-3 py-3 text-center">
-                  <p className="text-xs font-semibold text-gray-700">{p.label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-      </div>
-
+      <PopularCard></PopularCard>
+       
       <ExtraSection />
     </>
   );

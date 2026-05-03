@@ -6,6 +6,12 @@ import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const RegisterPage = () => {
+ const handleGoogleSignin =async()=>{
+     const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  }
+
 const {register, handleSubmit, formState:{errors}} = useForm()
 
    const [isShowPassword, setIsShowPassword] = useState(true);
@@ -59,7 +65,7 @@ bg-gradient-to-br from-sky-200 via-yellow-50 to-orange-200">
      { errors.password && <p className='text-red-500'>{errors.password.message}</p>}
    </fieldset>
 
-<Link href={"/login"}>
+
 <button className="
   btn 
   bg-orange-400 
@@ -74,7 +80,23 @@ bg-gradient-to-br from-sky-200 via-yellow-50 to-orange-200">
   hover:shadow-orange-400/50 
 ">
   Register
-</button></Link>
+</button>
+
+<button className="
+  btn 
+  bg-blue-500 
+  text-white 
+  border border-gray-200 
+  rounded-md 
+  mt-2 w-full
+
+  transition-all duration-300 
+  hover:bg-blue-500 
+  hover:shadow-lg 
+  hover:shadow-orange-400/50 
+" onClick={handleGoogleSignin}>
+  Signup with google
+</button>
 
 </form>
   

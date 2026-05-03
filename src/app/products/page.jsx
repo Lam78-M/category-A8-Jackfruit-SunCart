@@ -4,7 +4,7 @@ import { FaRegStar } from 'react-icons/fa';
 
 export default function ProductsPage() {
   return (
-    <div className="bg-amber-50 min-h-screen py-10 px-4">
+    <div className="bg-amber-50 min-h-screen py-10 px-4 mt-2">
 
       {/* Header */}
       <div className="text-center mb-10">

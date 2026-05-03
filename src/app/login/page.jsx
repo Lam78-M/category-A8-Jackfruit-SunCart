@@ -6,6 +6,12 @@ import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Login = () => {
+
+  const handleGoogleSignin =async()=>{
+     const data = await authClient.signIn.social({
+    provider: "google",
+  });
+  }
       
       const {register, handleSubmit, formState:{errors}} = useForm()
 
@@ -54,6 +60,21 @@ bg-gradient-to-br from-sky-200 via-yellow-50 to-orange-200">
   hover:shadow-orange-400/50 
 ">
   Login 
+</button>
+<button className="
+  btn 
+  bg-blue-500 
+  text-white 
+  border border-gray-200 
+  rounded-md 
+  mt-2 w-full
+
+  transition-all duration-300 
+  hover:bg-blue-500 
+  hover:shadow-lg 
+  hover:shadow-orange-400/50 
+" onClick={handleGoogleSignin}>
+  Coutinue with google
 </button>
 
 </form>
