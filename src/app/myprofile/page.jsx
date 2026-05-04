@@ -63,7 +63,7 @@ export default function MyProfile() {
               className="w-24 h-24 rounded-full border-4 border-orange-400 object-cover"
             />
           ) : (
-            <div className="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center text-xl">
+            <div className="w-12 h-12 rounded-full bg-gray-300 flex items-center justify-center text-xl">
               <FaUser />
             </div>
              )}
