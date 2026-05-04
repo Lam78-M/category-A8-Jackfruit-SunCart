@@ -12,18 +12,18 @@ export default function ExtraSection() {
 
      
 
-{/* ── Summer Care Tips ── */}
+
 <section
   className="relative overflow-hidden rounded-3xl px-8 py-12 mt-30"
   style={{ background: "linear-gradient(160deg, #fffbeb 0%, #fef9f0 40%, #f0fdf4 100%)" }}>
 
-  {/* decorative blobs */}
+
   <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full pointer-events-none"
     style={{ background: "radial-gradient(circle, #fde68a44, transparent 70%)" }}/>
   <div className="absolute -bottom-10 -left-10 w-40 h-40 rounded-full pointer-events-none"
     style={{ background: "radial-gradient(circle, #bbf7d044, transparent 70%)" }}/>
 
-  {/* Header */}
+
   <div className="mb-10 relative z-10">
     <h2 className="text-4xl font-extrabold text-stone-900 flex items-center gap-3"
       style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -36,10 +36,10 @@ export default function ExtraSection() {
     </p>
   </div>
 
-  {/* Cards Grid */}
+
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5 relative z-10">
 
-    {/* Card 1 — Pink */}
+   
     <div className="bg-pink-50 border border-pink-200 rounded-2xl overflow-hidden hover:-translate-y-1.5 hover:shadow-xl shadow-pink-100 transition-all duration-300 relative">
       <span className="absolute top-3 right-3 bg-pink-100 text-pink-700 text-xs font-semibold w-8 h-8 rounded-full flex items-center justify-center z-10">01</span>
       <div className="mb-3 flex justify-center items-center">
@@ -59,7 +59,7 @@ export default function ExtraSection() {
       </div>
     </div>
 
-    {/* Card 2 — Blue */}
+  
     <div className="bg-blue-50 border border-blue-200 rounded-2xl overflow-hidden hover:-translate-y-1.5 hover:shadow-xl shadow-blue-100 transition-all duration-300 relative">
       <span className="absolute top-3 right-3 bg-blue-100 text-blue-700 text-xs font-semibold w-8 h-8 rounded-full flex items-center justify-center z-10">02</span>
       <div className="mb-3 flex justify-center items-center">
@@ -79,7 +79,7 @@ export default function ExtraSection() {
       </div>
     </div>
 
-    {/* Card 3 — Green */}
+   
     <div className="bg-green-50 border border-green-200 rounded-2xl overflow-hidden hover:-translate-y-1.5 hover:shadow-xl shadow-green-100 transition-all duration-300 relative">
       <span className="absolute top-3 right-3 bg-green-100 text-green-700 text-xs font-semibold w-8 h-8 rounded-full flex items-center justify-center z-10">03</span>
       <div className="mb-3 flex justify-center items-center">
@@ -99,7 +99,7 @@ export default function ExtraSection() {
       </div>
     </div>
 
-    {/* Card 4 — Yellow */}
+
     <div className="bg-yellow-50 border border-yellow-200 rounded-2xl overflow-hidden hover:-translate-y-1.5 hover:shadow-2xl shadow-yellow-100 transition-all duration-300 relative">
       <span className="absolute top-3 right-3 bg-yellow-100 text-yellow-700 text-xs font-semibold w-8 h-8 rounded-full flex items-center justify-center z-10">04</span>
       <div className="mb-3 flex justify-center items-center">
@@ -126,11 +126,11 @@ export default function ExtraSection() {
 <section className="relative overflow-hidden rounded-3xl px-8 py-10 mt-25"
   style={{ background: "linear-gradient(135deg, #f0f9ff 0%, #fefce8 50%, #f0fdf4 100%)" }}>
 
-  {/* decorative blob */}
+  
   <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full pointer-events-none"
     style={{ background: "radial-gradient(circle, #fde68a33, transparent 70%)" }} />
 
-  {/* Header */}
+ 
   <div className="mb-8 relative z-10">
     <h2 className="text-3xl font-extrabold text-stone-900 flex items-center gap-3"
       style={{ fontFamily: "'Playfair Display', serif" }}>
@@ -147,10 +147,12 @@ export default function ExtraSection() {
     </p>
   </div>
 
-  {/* Grid */}
+
   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
 
     {/* Card 1 — Nivea */}
+
+    
     <div className="relative bg-white border-[1.5px] border-blue-200 rounded-2xl p-6
       flex flex-col items-center text-center cursor-pointer
       hover:-translate-y-1.5 hover:shadow-xl hover:shadow-blue-100
@@ -170,6 +172,8 @@ export default function ExtraSection() {
     </div>
 
     {/* Card 2 — Sunsilk */}
+
+
     <div className="relative bg-white border-[1.5px] border-yellow-200 rounded-2xl p-6
       flex flex-col items-center text-center cursor-pointer
       hover:-translate-y-1.5 hover:shadow-xl hover:shadow-yellow-100
@@ -189,6 +193,8 @@ export default function ExtraSection() {
     </div>
 
     {/* Card 3 — Parachute */}
+
+
     <div className="relative bg-white border-[1.5px] border-green-200 rounded-2xl p-6
       flex flex-col items-center text-center cursor-pointer
       hover:-translate-y-1.5 hover:shadow-xl hover:shadow-green-100
@@ -208,6 +214,8 @@ export default function ExtraSection() {
     </div>
 
     {/* Card 4 — Vaseline */}
+
+
     <div className="relative bg-white border-[1.5px] border-sky-200 rounded-2xl p-6
       flex flex-col items-center text-center cursor-pointer
       hover:-translate-y-1.5 hover:shadow-xl hover:shadow-sky-100

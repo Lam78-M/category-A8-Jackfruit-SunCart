@@ -1,5 +1,6 @@
 import products from "@/data/products.json";
 import Image from "next/image";
+import { FaRegStar } from "react-icons/fa";
 
 export  default async function ProductDetails({ params }) {
   const { id } = await params;
@@ -15,7 +16,7 @@ export  default async function ProductDetails({ params }) {
   return (
    <div className="my-10 py-7 px-5 mx-auto bg-amber-100 rounded-xl shadow-lg max-w-2xl">
 
-  {/* Image */}
+  
   <div className="relative w-full h-80 mb-6">
     <Image
       src={product.image}
@@ -25,7 +26,7 @@ export  default async function ProductDetails({ params }) {
     />
   </div>
 
-  {/* Info */}
+
   <h1 className="text-3xl font-bold text-amber-800">
     {product.name}
   </h1>
@@ -34,7 +35,7 @@ export  default async function ProductDetails({ params }) {
     Brand: <span className="font-medium">{product.brand}</span>
   </p>
 
-  {/* Category + Stock */}
+ 
   <div className="flex flex-wrap gap-3 mt-3">
 
     <span className="px-3 py-1 text-sm bg-amber-200 text-amber-800 rounded-full font-medium">
@@ -60,8 +61,8 @@ export  default async function ProductDetails({ params }) {
     ৳{product.price}
   </p>
 
-  <p className="mt-2 text-amber-700">
-    ⭐ {product.rating} / 5
+  <p className="mt-2 text-amber-700 flex items-center gap-2">
+    <FaRegStar className="md" /> {product.rating} / 5
   </p>
 
 </div>

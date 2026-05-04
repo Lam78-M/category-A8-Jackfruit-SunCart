@@ -28,6 +28,7 @@ The goal of this project is to build a fully responsive, authentication-based eC
 * **BetterAuth (Authentication)**
 * **Animate.css (Animations)**
 * **Unsplash (Images)**
+* **Toast (Show short toast)**
 
 ---
 
@@ -100,6 +101,7 @@ Sensitive keys (e.g., authentication config) are stored securely using environme
 * react-hook-form
 * better-auth
 * animate.css
+* react toast
 
 ## 📌 GitHub Repository
 
@@ -108,7 +110,7 @@ Sensitive keys (e.g., authentication config) are stored securely using environme
 ---
 ## 👨‍💻 Author
 
-**Your Name**
+**Ayat Alabi Lam**
 
 ---
 

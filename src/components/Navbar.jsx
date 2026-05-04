@@ -15,9 +15,8 @@ const Navbar = () => {
     <div className='bg-base-100 shadow-sm w-full'>
       <div className="navbar">
 
-        {/* ===== NAVBAR START ===== */}
         <div className="navbar-start">
-          {/* Hamburger - only SM/MD */}
+
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -40,14 +39,14 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Logo */}
+   
           <a className="flex items-center gap-2 text-2xl font-bold text-orange-400 ml-2">
             <IoSunny className='text-orange-400 text-3xl' />
             SUN <span className='text-gray-800 font-bold'>CART</span>
           </a>
         </div>
 
-        {/* ===== NAVBAR CENTER - শুধু LG এ nav links ===== */}
+        
         <div className="navbar-center">
           <ul className="hidden lg:flex menu menu-horizontal px-1 text-lg text-gray-800">
             <div className='flex gap-5'>
@@ -67,7 +66,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* ===== NAVBAR END - Auth Buttons ===== */}
+     
         <div className="navbar-end">
           <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center gap-2 mr-3">
             {isPending ? (

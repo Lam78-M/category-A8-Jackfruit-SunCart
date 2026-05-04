@@ -13,7 +13,6 @@ export default function MyProfile() {
   const [name, setName] = useState('');
   const [image, setImage] = useState('');
 
-  // 🔥 Fetch user safely
   useEffect(() => {
     const fetchUser = async () => {
       try {
@@ -39,11 +38,10 @@ export default function MyProfile() {
     return <p className="p-5 text-center">Loading...</p>;
   }
 
-  // 🔥 Save handler (frontend + toast)
+    // handle toas use 
+  
   const handleSave = async () => {
     try {
-      // ⚠️ NOTE: এখানে real backend update লাগবে
-      // এখন শুধু UI update
       setUser((prev) => ({
         ...prev,
         name,
@@ -61,8 +59,6 @@ export default function MyProfile() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-100 via-white to-yellow-100 p-5">
 
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md text-center">
-
-        {/* Profile Image */}
         <div className="flex justify-center mb-4">
           {user.image ? (
             <Image
@@ -78,8 +74,7 @@ export default function MyProfile() {
             </div>
           )}
         </div>
-
-        {/* VIEW MODE */}
+      
         {!isEdit && (
           <>
             <h2 className="text-2xl font-bold">{user.name}</h2>
@@ -94,7 +89,6 @@ export default function MyProfile() {
           </>
         )}
 
-        {/* EDIT MODE */}
         {isEdit && (
           <div className="space-y-3 text-left mt-4">
 

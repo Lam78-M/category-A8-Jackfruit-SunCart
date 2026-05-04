@@ -11,13 +11,13 @@ export default function SummerSaleBanner() {
     <>
       <section className="w-full bg-gradient-to-br from-amber-50 via-orange-100 to-amber-100 py-14 px-6 mt-3 mb-50 relative overflow-hidden">
 
-        {/* Background decorative circles */}
+        
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-yellow-300/20 rounded-full pointer-events-none" />
         <div className="absolute -bottom-16 -left-16 w-60 h-60 bg-orange-400/10 rounded-full pointer-events-none" />
 
         <div className="animate__animated animate__bounceInRight animate_slow   max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
 
-          {/* Left — Promo Card */}
+
           <div
             className="relative rounded-3xl px-10 py-12 flex flex-col justify-center overflow-hidden shrink-0 w-full lg:w-[320px]"
             style={{
@@ -25,7 +25,7 @@ export default function SummerSaleBanner() {
               boxShadow: "0 24px 60px rgba(220,80,0,0.30), 0 4px 16px rgba(0,0,0,0.10)",
             }}
           >
-            {/* Texture overlay */}
+ 
             <div
               className="absolute inset-0 pointer-events-none opacity-[0.04]"
               style={{
@@ -33,10 +33,10 @@ export default function SummerSaleBanner() {
                   "repeating-linear-gradient(45deg, #fff 0px, #fff 1px, transparent 1px, transparent 14px)",
               }}
             />
-            {/* Glow circle */}
+
             <div className="absolute -top-14 -right-14 w-52 h-52 rounded-full bg-white/10 pointer-events-none" />
 
-            {/* Badge */}
+   
             <div className="inline-flex items-center gap-2 bg-black/20 border border-white/20 rounded-full px-4 py-1.5 mb-7 w-fit">
               <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse" />
               <span className="text-white/90 text-[11px] font-semibold uppercase tracking-widest">
@@ -44,7 +44,7 @@ export default function SummerSaleBanner() {
               </span>
             </div>
 
-            {/* Headline */}
+
             <h2 className="text-5xl font-black leading-none text-white mb-1">
               Summer
               <br />
@@ -56,7 +56,7 @@ export default function SummerSaleBanner() {
 
             <div className="h-px bg-white/20 mb-6" />
 
-            {/* Discount */}
+     
             <div className="flex items-end gap-3 mb-2">
               <span className="text-7xl font-black text-yellow-300 leading-none" style={{ letterSpacing: "-3px" }}>
                 50%
@@ -74,7 +74,7 @@ export default function SummerSaleBanner() {
               <span className="text-white/85 font-semibold">June 30, 2026</span> · No code needed
             </p>
 
-            {/* CTA */}
+    
             <div className="flex flex-col gap-3">
               <button className="inline-flex items-center justify-center gap-2 bg-white text-orange-600 font-bold text-sm rounded-full px-6 py-3 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-150 shadow-md w-fit">
                 Shop Now →
@@ -86,12 +86,12 @@ export default function SummerSaleBanner() {
             </div>
           </div>
 
-          {/* Right — Product Cards */}
+
          
-{/* Right — Product Cards */}
+
 <div className="grid grid-cols-2 md:grid-cols-3 gap-5 w-full">
 
-  {/* Beach */}
+ 
   <div className="row-span-2 relative rounded-2xl  bg-blue-300 overflow-hidden h-[330px]">
     <Image src="/assets/tavia-b-5_1JUIOjXKU-unsplash.jpg" alt="beach" fill className="object-cover" />
     <span className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
@@ -99,7 +99,7 @@ export default function SummerSaleBanner() {
     </span>
   </div>
 
-  {/* Sunglasses */}
+ 
   <div className="relative rounded-2xl bg-blue-300 overflow-hidden h-[160px]">
     <Image src="/assets/they-callme-zeus-Mfwla4WVG6s-unsplash.jpg" alt="sunglasses" fill className="object-cover" />
     <span className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
@@ -107,7 +107,7 @@ export default function SummerSaleBanner() {
     </span>
   </div>
 
-  {/* Ice Cream */}
+ 
   <div className="relative rounded-2xl bg-blue-300 overflow-hidden h-[160px]">
     <Image src="/assets/jason-pischke-xVSyLQxEprw-unsplash.jpg" alt="ice cream" fill className="object-cover" />
     <span className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
@@ -115,20 +115,20 @@ export default function SummerSaleBanner() {
     </span>
   </div>
 
-  {/* Summer Food */}
+
 <div className="col-span-2 relative rounded-2xl overflow-hidden h-[150px] flex items-center justify-center">
 
-  {/* Gradient Background */}
+
   <div className="absolute inset-0 bg-gradient-to-r from-orange-400 via-amber-500 to-yellow-300" />
 
-  {/* Glass overlay */}
+
   <div className="absolute inset-0 backdrop-blur-[6px] bg-white/10" />
 
-  {/* Decorative glow */}
+
   <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/20 rounded-full blur-2xl" />
   <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-orange-500/20 rounded-full blur-2xl" />
 
-  {/* Content */}
+  
   <div className="relative z-10 text-center px-4">
     <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight drop-shadow-lg flex  items-center gap-3">
       Your Summer <BsFillEmojiSunglassesFill className="text-yellow-300" />
@@ -143,7 +143,7 @@ export default function SummerSaleBanner() {
 
 </div>
 
-  {/* Flip Flops */}
+
   <div className="relative rounded-2xl bg-blue-300 overflow-hidden  h-[160px]">
     <Image src="/assets/warren-umoh-Me7y3DYfIBE-unsplash.jpg" alt="flip flops" fill className="object-cover" />
     <span className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
@@ -151,7 +151,7 @@ export default function SummerSaleBanner() {
     </span>
   </div>
 
-  {/* New Card (Fix empty space) */}
+
   <div className="relative rounded-2xl bg-blue-300 overflow-hidden  h-[160px]">
     <Image src="/assets/roman-davayposmotrim-8Xzslh4ku4E-unsplash.jpg" alt="sunscreen" fill className="object-cover" />
     <span className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">

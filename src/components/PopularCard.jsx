@@ -28,7 +28,7 @@ const PopularCard = () => {
                     {products.products.slice(0, 5).map(product => (
                       <div key={product.id} className="bg-white rounded-2xl shadow-sm border border-amber-100 overflow-hidden flex flex-col hover:shadow-md transition-shadow">
                         
-                        {/* Image */}
+                  
                         <div className="relative w-full h-48 sm:h-52 md:h-60 lg:h-60 bg-amber-50">
                           <Image
                             src={product.image}
@@ -39,20 +39,17 @@ const PopularCard = () => {
                           />
                         </div>
             
-                        {/* Body */}
+                 
                         <div className="p-4 flex flex-col gap-2 flex-1">
-                          {/* Name & Brand */}
+               
                           <h2 className=" text-2xl font-semibold text-gray-800">{product.name}</h2>
-                         
-                          {/* Rating */}
+         
                           <p className="text-sm text-amber-500 flex items-center gap-2 pt-3"><FaRegStar className='text-lg' /> {product.rating} / 5</p>
             
-                          {/* Price + Button */}
+          
                           <div className="mt-auto flex items-center justify-between pt-3 border-t border-amber-100">
                             <span className="text-lg font-bold text-amber-700">৳{product.price}</span>
-                            {/* <button className="bg-amber-500 hover:bg-amber-600 text-white text-sm px-4 py-2 rounded-xl transition-colors">
-                              Add to Cart
-                            </button> */}
+                            
                           </div>
                           
 

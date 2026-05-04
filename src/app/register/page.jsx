@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation';
 
 const RegisterPage = () => {
   const {
@@ -14,14 +15,15 @@ const RegisterPage = () => {
   } = useForm();
 
   const [isShowPassword, setIsShowPassword] = useState(true);
+  const router = useRouter()
 
-  // 🔥 Google Signup
   const handleGoogleSignin = async (e) => {
     e.preventDefault();
 
     try {
       await authClient.signIn.social({
         provider: 'google',
+         callbackURL: '/',
       });
 
       toast.success('Google signup successful 🚀');
@@ -30,7 +32,6 @@ const RegisterPage = () => {
     }
   };
 
-  // 🔥 Email Signup
   const handleRegisterInfo = async (data) => {
     try {
       const { email, name, photo, password } = data;
@@ -50,6 +51,7 @@ const RegisterPage = () => {
 
       if (res) {
         toast.success('Signup Successful 🎉');
+         router.push('/');
       }
     } catch (err) {
       toast.error('Something went wrong');
@@ -68,7 +70,6 @@ const RegisterPage = () => {
 
         <form className="space-y-3" onSubmit={handleSubmit(handleRegisterInfo)}>
 
-          {/* Name */}
           <fieldset className="fieldset">
             <legend className="fieldset-legend text-[16px]">Name</legend>
             <input
@@ -82,7 +83,6 @@ const RegisterPage = () => {
             )}
           </fieldset>
 
-          {/* Photo */}
           <fieldset className="fieldset">
             <legend className="fieldset-legend text-[16px]">Photo</legend>
             <input
@@ -96,7 +96,6 @@ const RegisterPage = () => {
             )}
           </fieldset>
 
-          {/* Email */}
           <fieldset className="fieldset">
             <legend className="fieldset-legend text-[16px]">Email</legend>
             <input
@@ -110,7 +109,6 @@ const RegisterPage = () => {
             )}
           </fieldset>
 
-          {/* Password */}
           <fieldset className="fieldset relative">
             <legend className="fieldset-legend text-[16px]">Password</legend>
 
@@ -143,7 +141,6 @@ const RegisterPage = () => {
             )}
           </fieldset>
 
-          {/* Register Button */}
           <button
             type="submit"
             disabled={isSubmitting}
@@ -152,7 +149,6 @@ const RegisterPage = () => {
             {isSubmitting ? 'Registering...' : 'Register'}
           </button>
 
-          {/* Google Button */}
           <button
             type="button"
             onClick={handleGoogleSignin}

@@ -30,8 +30,8 @@ const { data:res, error } = await authClient.signIn.email({
     return (
        <div className="mx-auto min-h-[85vh] w-full max-w-4xl px-4 mt-10 flex justify-center items-center 
 bg-gradient-to-br from-sky-200 via-yellow-50 to-orange-200">
-            <div className='p-10 rounded-xl bg-white shadow-2xl'>
-                <h2 className='font-bold text-3xl text-center mb-5'>Login your account</h2>
+       <div className='p-10 rounded-xl bg-white shadow-2xl'>
+       <h2 className='font-bold text-3xl text-center mb-5'>Login your account</h2>
 <form className='space-y-3' onSubmit={handleSubmit(handleLoginInfo)}>
      <fieldset className="fieldset">
   <legend className="fieldset-legend text-[16px]">Email</legend>
