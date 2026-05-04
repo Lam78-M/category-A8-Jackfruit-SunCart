@@ -6,13 +6,16 @@ import { AiFillProduct } from 'react-icons/ai';
 import { FaHome, FaRegUser } from 'react-icons/fa';
 import { IoSunny } from "react-icons/io5";
 import Image from 'next/image';
+import Marquee from 'react-fast-marquee';
+import DigiMarqee from '@/app/digimarquee/page';
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
 
   return (
-    <div className="bg-base-100 shadow-sm w-full">
+   <div>
+     <div className="bg-base-100 shadow-sm w-full">
       <div className="navbar max-w-7xl mx-auto px-2">
 
         {/* LEFT */}
@@ -112,7 +115,12 @@ const Navbar = () => {
         </div>
 
       </div>
+
+
+      
     </div>
+     <DigiMarqee></DigiMarqee>
+   </div>
   );
 };
 

@@ -4,70 +4,76 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 mt-10">
+   <footer className="bg-gradient-to-b from-gray-900 to-black text-gray-300 mt-10 pt-10 ">
 
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-14">
 
-    
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 text-center sm:text-left">
+    {/* Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-center sm:text-left">
 
-       
-          <div className="pl-0 lg:pl-20">
-            <h2 className="text-white text-lg font-semibold mb-4 ">
-              Contact Info
-            </h2>
-            <p className="mb-1">Email: support@suncart.com</p>
-            <p className="mb-1">Phone: +880 1602-514628</p>
-            <p>Address: Dhaka, Bangladesh</p>
-          </div>
+      {/* Contact */}
+      <div>
+        <h2 className="text-white text-lg font-semibold mb-5">
+          📩 Contact Info
+        </h2>
 
-          
-          <div className="pl-0 md:pl-0 lg:pl-60">
-            <h2 className="text-white text-lg font-semibold mb-4 pl-3">
-           Follow Us
-            </h2>
+        <div className="space-y-2 text-sm text-gray-400">
+          <p>✉️ support@suncart.com</p>
+          <p>📞 +880 1602-514628</p>
+          <p>📍 Dhaka, Bangladesh</p>
+        </div>
+      </div>
 
-        <div className="flex justify-center sm:justify-start gap-3 pl-2 text-xl">
-         <a href="#" className="hover:text-orange-500 transition">
-                <FaFacebookF />
-           </a>
-              <a href="#" className="hover:text-orange-500 transition">
-                <FaTwitter />
-              </a>
-         <a href="#" className="hover:text-orange-500 transition">
-                <FaInstagram />
+      {/* Social */}
+      <div className="flex flex-col items-center sm:items-start">
+        <h2 className="text-white text-lg font-semibold mb-5">
+          🌐 Follow Us
+        </h2>
+
+        <div className="flex gap-4 text-xl">
+          <a href="#" className="hover:text-blue-500 transition transform hover:scale-110">
+            <FaFacebookF />
           </a>
-            </div>
-          </div>
-
-        
-          <div className="pl-0 md:pl-0 lg:pl-40">
-            <h2 className="text-white text-lg font-semibold mb-4">
-              Privacy Policy
-            </h2>
-
-         <p className="text-sm leading-6 mb-3">
-              We respect your privacy. Your data is safe and secure with us.
-            </p>
-
-            <Link
-              href="/privacy"
-              className="text-orange-400 hover:underline text-sm"
-            >
-              Read More →
-            </Link>
-          </div>
-
+          <a href="#" className="hover:text-sky-400 transition transform hover:scale-110">
+            <FaTwitter />
+          </a>
+          <a href="#" className="hover:text-pink-500 transition transform hover:scale-110">
+            <FaInstagram />
+          </a>
         </div>
 
+        <p className="text-xs text-gray-500 mt-4">
+          Stay connected with us for updates ✨
+        </p>
       </div>
 
-    
-      <div className="border-t border-gray-700 text-center py-4 text-sm">
-        © {new Date().getFullYear()} SunCart. All rights reserved.
+      {/* Privacy */}
+      <div>
+        <h2 className="text-white text-lg font-semibold mb-5">
+          🔒 Privacy Policy
+        </h2>
+
+        <p className="text-sm text-gray-400 leading-6 mb-4">
+          We respect your privacy. Your data is protected with strong security standards.
+        </p>
+
+        <Link
+          href="/privacy"
+          className="inline-block text-orange-400 hover:text-orange-300 text-sm font-medium transition"
+        >
+          Read More →
+        </Link>
       </div>
 
-    </footer>
+    </div>
+  </div>
+
+  {/* Bottom bar */}
+  <div className="border-t border-gray-800 text-center py-5 text-sm text-gray-500">
+    © {new Date().getFullYear()} <span className="text-white font-medium">SunCart</span>. All rights reserved.
+  </div>
+
+</footer>
   );
 };
 

@@ -9,7 +9,7 @@ import { BsFillEmojiSunglassesFill } from "react-icons/bs";
 export default function SummerSaleBanner() {
   return (
     <>
-      <section className="w-full bg-gradient-to-br from-amber-50 via-orange-100 to-amber-100 py-14 px-6 mt-3 mb-50 relative overflow-hidden">
+      <section className="w-full bg-gradient-to-br from-amber-50 via-orange-100 to-amber-100 py-14 px-6 mt-25 mb-50 relative overflow-hidden">
 
         
         <div className="absolute -top-20 -right-20 w-80 h-80 bg-yellow-300/20 rounded-full pointer-events-none" />

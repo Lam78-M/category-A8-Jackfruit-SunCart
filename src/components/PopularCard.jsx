@@ -12,7 +12,7 @@ const PopularCard = () => {
                    <div className="text-center mb-8">
   <h2 className="text-4xl font-bold text-amber-700 tracking-wide relative inline-block">
     Our Popular Products
-    <span className="block h-1 w-24 bg-amber-500 mx-auto mt-2 rounded-full"></span>
+    <span className="block h-1 w-24 bg-amber-500 mx-auto mt-4 rounded-full"></span>
   </h2>
 </div>
                 <div className="w-full sm:w-[60%] md:w-[60%] lg:w-[40%] mx-auto mt-3">
@@ -21,7 +21,7 @@ const PopularCard = () => {
                <div className="mt-15 p-10"        
   style={{
     background: "linear-gradient(180deg, #FEF3C7 0%, #FDE68A 40%, #6EE7B7 100%)",
-    borderRadius: "16px"
+  
   }}>
               <Marquee pauseOnHover={true} speed={100} >
              <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5  gap-6">

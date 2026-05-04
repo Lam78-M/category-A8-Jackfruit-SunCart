@@ -34,10 +34,10 @@ The goal of this project is to build a fully responsive, authentication-based eC
 ---
 
 ##  🛒 Core Features
-  🌞 Summer-themed modern eCommerce interface
-  🧾 Product listing from JSON data
-  🔍 Detailed product view with rich UI
- ⚡ Fast navigation using Next.js App Router
+* 🌞 Summer-themed modern eCommerce interface
+* 🧾 Product listing from JSON data
+* 🔍 Detailed product view with rich UI
+* ⚡ Fast navigation using Next.js App Router
 
 
 ### 🔐 Authentication System

@@ -3,18 +3,19 @@ import Image from "next/image";
 import { GiSunflower } from "react-icons/gi";
 import { SiBrandfolder } from "react-icons/si";
 import 'animate.css';
+import DigiMarqee from "@/app/digimarquee/page";
 export default function ExtraSection() {
 
 
 
   return (
-    <div className="container mx-auto max-w-8xl  px-4 py-10 space-y-12 mt-30">
+    <div className="container mx-auto max-w-8xl  px-4 py-10 space-y-12 mt-10">
 
      
 
 
 <section
-  className="relative overflow-hidden rounded-3xl px-8 py-12 mt-30"
+  className="relative overflow-hidden rounded-3xl px-8 py-12 mt-30  "
   style={{ background: "linear-gradient(160deg, #fffbeb 0%, #fef9f0 40%, #f0fdf4 100%)" }}>
 
 
@@ -121,9 +122,12 @@ export default function ExtraSection() {
 
   </div>
 </section>
+
+
+
       {/* ── Top Brands ── */}
    
-<section className="relative overflow-hidden rounded-3xl px-8 py-10 mt-25"
+<section className="relative overflow-hidden rounded-3xl px-8 py-10 mt-50 mb-20"
   style={{ background: "linear-gradient(135deg, #f0f9ff 0%, #fefce8 50%, #f0fdf4 100%)" }}>
 
   
@@ -148,7 +152,7 @@ export default function ExtraSection() {
   </div>
 
 
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10">
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-10 mt-10">
 
     {/* Card 1 — Nivea */}
 
