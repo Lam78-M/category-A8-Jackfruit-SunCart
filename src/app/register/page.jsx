@@ -9,29 +9,20 @@ import { useRouter } from 'next/navigation';
 
 const RegisterPage = () => {
   const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm();
-
-  const [isShowPassword, setIsShowPassword] = useState(true);
-  const router = useRouter()
-
-  const handleGoogleSignin = async (e) => {
+    register, handleSubmit, formState: { errors, isSubmitting },} = useForm();
+   const [isShowPassword, setIsShowPassword] = useState(true);
+   const router = useRouter()
+   const handleGoogleSignin = async (e) => {
     e.preventDefault();
-
-    try {
-      await authClient.signIn.social({
+    try { await authClient.signIn.social({
         provider: 'google',
          callbackURL: '/',
       });
-
       toast.success('Google signup successful 🚀');
-    } catch (err) {
+      } catch (err) {
       toast.error('Google signup failed');
     }
   };
-
   const handleRegisterInfo = async (data) => {
     try {
       const { email, name, photo, password } = data;
@@ -61,15 +52,11 @@ const RegisterPage = () => {
   return (
     <div className="mx-auto min-h-[85vh] w-full max-w-4xl px-4 mt-10 flex justify-center items-center 
     bg-gradient-to-br from-sky-200 via-yellow-50 to-orange-200">
-
       <div className="p-10 rounded-xl bg-white shadow-2xl">
-
         <h2 className="font-bold text-3xl text-center mb-5">
           Create account
         </h2>
-
         <form className="space-y-3" onSubmit={handleSubmit(handleRegisterInfo)}>
-
           <fieldset className="fieldset">
             <legend className="fieldset-legend text-[16px]">Name</legend>
             <input
@@ -156,7 +143,6 @@ const RegisterPage = () => {
           >
             Signup with Google
           </button>
-
         </form>
       </div>
     </div>

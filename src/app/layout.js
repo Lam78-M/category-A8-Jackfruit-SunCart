@@ -32,12 +32,11 @@ export default function RootLayout({ children }) {
     >
      
       <body className="min-h-full flex flex-col ">
-           <ToastContainer position="top-right" />
-   <Navbar></Navbar>
-   
-        {children}
-     <Footer></Footer>
-        </body>
+          <ToastContainer position="top-right" />
+          <Navbar></Navbar>
+          {children}
+          <Footer></Footer>
+          </body>
     </html>
   );
 }

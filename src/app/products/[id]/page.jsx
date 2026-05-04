@@ -8,16 +8,12 @@ export  default async function ProductDetails({ params }) {
   const product = products.products.find(
     (p) => String(p.id) === String(id)
   );
-
   if (!product) {
     return <p className="text-center mt-10">Product not found</p>;
   }
-
   return (
    <div className="my-10 py-7 px-5 mx-auto bg-amber-100 rounded-xl shadow-lg max-w-2xl">
-
-  
-  <div className="relative w-full h-80 mb-6">
+   <div className="relative w-full h-80 mb-6">
     <Image
       src={product.image}
       alt={product.name}
@@ -25,23 +21,16 @@ export  default async function ProductDetails({ params }) {
       className="object-cover rounded-xl"
     />
   </div>
-
-
-  <h1 className="text-3xl font-bold text-amber-800">
+    <h1 className="text-3xl font-bold text-amber-800">
     {product.name}
-  </h1>
-
-  <p className="text-gray-600 mt-1">
+   </h1>
+    <p className="text-gray-600 mt-1">
     Brand: <span className="font-medium">{product.brand}</span>
-  </p>
-
- 
-  <div className="flex flex-wrap gap-3 mt-3">
-
+    </p>
+    <div className="flex flex-wrap gap-3 mt-3">
     <span className="px-3 py-1 text-sm bg-amber-200 text-amber-800 rounded-full font-medium">
        {product.category}
     </span>
-
     <span className={`px-3 py-1 text-sm rounded-full font-medium 
       ${product.stock > 0 
         ? "bg-green-200 text-green-800" 
@@ -50,21 +39,16 @@ export  default async function ProductDetails({ params }) {
     >
       {product.stock > 0 ? `In Stock (${product.stock})` : "Out of Stock"}
     </span>
-
-  </div>
-
+   </div>
   <p className="mt-4 text-gray-700 leading-relaxed">
     {product.description}
   </p>
-
   <p className="mt-4 text-xl font-bold text-amber-700">
     ৳{product.price}
   </p>
-
   <p className="mt-2 text-amber-700 flex items-center gap-2">
     <FaRegStar className="md" /> {product.rating} / 5
   </p>
-
 </div>
   );
 }
