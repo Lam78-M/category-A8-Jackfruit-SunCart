@@ -8,6 +8,7 @@ import { IoSunny } from "react-icons/io5";
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 import DigiMarqee from '@/app/digimarquee/page';
+import Navlink from './Navlink';
 
 const Navbar = () => {
   const { data: session, isPending } = authClient.useSession();
@@ -34,19 +35,19 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-56 text-base"
             >
               <li>
-                <Link href="/" className="flex items-center gap-2">
+                <Navlink href="/" className="flex items-center gap-2">
                   <FaHome /> Home
-                </Link>
+                </Navlink>
               </li>
               <li>
-                <Link href="/products" className="flex items-center gap-2">
+                <Navlink href="/products" className="flex items-center gap-2">
                   <AiFillProduct /> Products
-                </Link>
+                </Navlink>
               </li>
               <li>
-                <Link href="/myprofile" className="flex items-center gap-2">
+                <Navlink href="/myprofile" className="flex items-center gap-2">
                   <FaRegUser /> My Profile
-                </Link>
+                </Navlink>
               </li>
             </ul>
           </div>
@@ -63,19 +64,19 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-lg gap-5">
             <li>
-              <Link href="/" className="flex items-center gap-2 hover:text-orange-400 transition">
+              <Navlink href="/" className="flex items-center gap-2 hover:text-orange-400 transition">
                 <FaHome /> Home
-              </Link>
+              </Navlink>
             </li>
             <li>
-              <Link href="/products" className="flex items-center gap-2 hover:text-orange-400 transition">
+              <Navlink href="/products" className="flex items-center gap-2 hover:text-orange-400 transition">
                 <AiFillProduct /> Products
-              </Link>
+              </Navlink>
             </li>
             <li>
-              <Link href="/myprofile" className="flex items-center gap-2 hover:text-orange-400 transition">
+              <Navlink href="/myprofile" className="flex items-center gap-2 hover:text-orange-400 transition">
                 <FaRegUser /> My Profile
-              </Link>
+              </Navlink>
             </li>
           </ul>
         </div>
