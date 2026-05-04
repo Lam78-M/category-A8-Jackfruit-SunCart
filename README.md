@@ -105,7 +105,7 @@ Sensitive keys (e.g., authentication config) are stored securely using environme
 
 ## 📌 GitHub Repository
 
-🔗 https://github.com/your-username/suncart
+🔗 https://github.com/Lam78-M/category-A8-Jackfruit-SunCart
 
 ---
 ## 👨‍💻 Author
