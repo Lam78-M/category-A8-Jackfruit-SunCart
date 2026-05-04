@@ -1,24 +1,35 @@
-'use client'
+'use client';
 
 import { authClient } from '@/lib/auth-client';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FaUser } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 export default function MyProfile() {
   const [user, setUser] = useState(null);
   const [isEdit, setIsEdit] = useState(false);
 
-  const [name, setName] = useState("");
-  const [image, setImage] = useState("");
+  const [name, setName] = useState('');
+  const [image, setImage] = useState('');
 
+  // 🔥 Fetch user safely
   useEffect(() => {
     const fetchUser = async () => {
-      const { data } = await authClient.getSession();
-      setUser(data?.user);
+      try {
+        const { data } = await authClient.getSession();
 
-      setName(data?.user?.name || "");
-      setImage(data?.user?.image || "");
+        if (!data?.user) {
+          toast.error('User not found');
+          return;
+        }
+
+        setUser(data.user);
+        setName(data.user.name || '');
+        setImage(data.user.image || '');
+      } catch (err) {
+        toast.error('Failed to load profile');
+      }
     };
 
     fetchUser();
@@ -28,17 +39,22 @@ export default function MyProfile() {
     return <p className="p-5 text-center">Loading...</p>;
   }
 
-  const handleSave = () => {
-    // frontend state update (demo purpose)
-    setUser({
-      ...user,
-      name,
-      image,
-    });
+  // 🔥 Save handler (frontend + toast)
+  const handleSave = async () => {
+    try {
+      // ⚠️ NOTE: এখানে real backend update লাগবে
+      // এখন শুধু UI update
+      setUser((prev) => ({
+        ...prev,
+        name,
+        image,
+      }));
 
-    setIsEdit(false);
-
-    // ⚠️ Real project এ এখানে backend update API call করতে হবে
+      setIsEdit(false);
+      toast.success('Profile updated successfully 🎉');
+    } catch (err) {
+      toast.error('Update failed');
+    }
   };
 
   return (
@@ -57,8 +73,8 @@ export default function MyProfile() {
               className="rounded-full border-4 border-orange-400 object-cover"
             />
           ) : (
-            <div className="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center">
-             <FaUser />
+            <div className="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center text-xl">
+              <FaUser />
             </div>
           )}
         </div>
@@ -109,7 +125,11 @@ export default function MyProfile() {
               </button>
 
               <button
-                onClick={() => setIsEdit(false)}
+                onClick={() => {
+                  setIsEdit(false);
+                  setName(user.name);
+                  setImage(user.image);
+                }}
                 className="flex-1 bg-gray-400 text-white py-2 rounded hover:bg-gray-500"
               >
                 Cancel
