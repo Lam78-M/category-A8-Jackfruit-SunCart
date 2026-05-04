@@ -58,8 +58,8 @@ export default function MyProfile() {
             <Image
               src={user.image}
               alt="profile"
-              width={50}
-              height={50}
+              width={25}
+              height={25}
               className="rounded-full border-4 border-orange-400 object-cover"
             />
           ) : (
