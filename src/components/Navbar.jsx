@@ -92,8 +92,8 @@ const Navbar = () => {
                 <Image
                   src={user?.image || "/assets/user.png"}
                   alt="user avatar"
-                  width={40}
-                  height={40}
+                  width={20}
+                  height={20}
                   className="rounded-full object-cover"
                 />
 
