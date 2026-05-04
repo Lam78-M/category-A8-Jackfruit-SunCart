@@ -1,110 +1,170 @@
-'use client'
+'use client';
+
 import { authClient } from '@/lib/auth-client';
-import Link from 'next/link';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 const RegisterPage = () => {
- const handleGoogleSignin =async()=>{
-     const data = await authClient.signIn.social({
-    provider: "google",
-  });
-  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm();
 
-const {register, handleSubmit, formState:{errors}} = useForm()
+  const [isShowPassword, setIsShowPassword] = useState(true);
 
-   const [isShowPassword, setIsShowPassword] = useState(true);
+  // 🔥 Google Signup
+  const handleGoogleSignin = async (e) => {
+    e.preventDefault();
 
-const handleRegisterInfo = async(data)=>{ console.log(data, "data")
-const {email, name, photo, password} = data;
-console.log( photo, email, password)
+    try {
+      await authClient.signIn.social({
+        provider: 'google',
+      });
 
-const {data:res, error} = await authClient.signUp.email({
-      name: name, // required
-    email: email, // required
-    password: password, // required
-    image: photo,
-    callbackURL: "/",
-});
-   console.log(res, error) 
-   if(error){
-    alert(error.message)
-   }
-   if(res){
-    alert("Signup Successfull")
-   }
+      toast.success('Google signup successful 🚀');
+    } catch (err) {
+      toast.error('Google signup failed');
+    }
+  };
 
- };
-    return (
-     <div className="mx-auto min-h-[85vh] w-full max-w-4xl px-4 mt-10 flex justify-center items-center 
-bg-gradient-to-br from-sky-200 via-yellow-50 to-orange-200">
-            <div className='p-10 rounded-xl bg-white shadow-2xl'>
-                <h2 className='font-bold text-3xl text-center mb-5'>Login your account</h2>
-<form className='space-y-3' onSubmit={handleSubmit(handleRegisterInfo)}>
- <fieldset className="fieldset">
-  <legend className="fieldset-legend text-[16px]">Name</legend>
-  <input type="name" {...register("name",{required: "Name field is required"})} className="input" placeholder="Type your name" />
-  { errors.name && <p className='text-red-500'>{errors.name.message}</p>}
-</fieldset>
-<fieldset className="fieldset">
-  <legend className="fieldset-legend text-[16px]">Photo</legend>
-  <input type="photo url" {...register("photo",{required: "Photo field is required"})} className="input" placeholder="Type your photo url" />
-  { errors.photo && <p className='text-red-500'>{errors.photo.message}</p>}
-</fieldset>
- <fieldset className="fieldset">
-  <legend className="fieldset-legend text-[16px]">Email</legend>
-  <input type="email" {...register("email",{required: "Email field is required"})} className="input" placeholder="Type your email" />
-  { errors.email && <p className='text-red-500'>{errors.email.message}</p>}
-</fieldset>
-    
-       <fieldset className="fieldset relative cursor-pointer">
-     <legend className="fieldset-legend text-[16px]">Password</legend>
-     <input type={isShowPassword ? "text": "password"} {...register("password",{required: "Password field is required"})} className="input" placeholder="Type your password" />
-     <span className='absolute right-2 top-4' onClick={()=>setIsShowPassword(!isShowPassword)}>{ isShowPassword ? <FaEye className='text-lg text-orange-600'/>: <FaEyeSlash className='text-lg text-orange-600'/>}</span>
-     { errors.password && <p className='text-red-500'>{errors.password.message}</p>}
-   </fieldset>
+  // 🔥 Email Signup
+  const handleRegisterInfo = async (data) => {
+    try {
+      const { email, name, photo, password } = data;
 
+      const { data: res, error } = await authClient.signUp.email({
+        name,
+        email,
+        password,
+        image: photo,
+        callbackURL: '/',
+      });
 
-<button className="
-  btn 
-  bg-orange-400 
-  text-white 
-  border border-gray-200 
-  rounded-md 
-  mt-2 w-full
+      if (error) {
+        toast.error(error.message || 'Signup failed');
+        return;
+      }
 
-  transition-all duration-300 
-  hover:bg-orange-500 
-  hover:shadow-lg 
-  hover:shadow-orange-400/50 
-">
-  Register
-</button>
+      if (res) {
+        toast.success('Signup Successful 🎉');
+      }
+    } catch (err) {
+      toast.error('Something went wrong');
+    }
+  };
 
-<button className="
-  btn 
-  bg-blue-500 
-  text-white 
-  border border-gray-200 
-  rounded-md 
-  mt-2 w-full
+  return (
+    <div className="mx-auto min-h-[85vh] w-full max-w-4xl px-4 mt-10 flex justify-center items-center 
+    bg-gradient-to-br from-sky-200 via-yellow-50 to-orange-200">
 
-  transition-all duration-300 
-  hover:bg-blue-500 
-  hover:shadow-lg 
-  hover:shadow-orange-400/50 
-" onClick={handleGoogleSignin}>
-  Signup with google
-</button>
+      <div className="p-10 rounded-xl bg-white shadow-2xl">
 
-</form>
-  
-            </div>
+        <h2 className="font-bold text-3xl text-center mb-5">
+          Create account
+        </h2>
 
-          
-        </div>
-    );
+        <form className="space-y-3" onSubmit={handleSubmit(handleRegisterInfo)}>
+
+          {/* Name */}
+          <fieldset className="fieldset">
+            <legend className="fieldset-legend text-[16px]">Name</legend>
+            <input
+              type="text"
+              {...register('name', { required: 'Name field is required' })}
+              className="input"
+              placeholder="Type your name"
+            />
+            {errors.name && (
+              <p className="text-red-500">{errors.name.message}</p>
+            )}
+          </fieldset>
+
+          {/* Photo */}
+          <fieldset className="fieldset">
+            <legend className="fieldset-legend text-[16px]">Photo</legend>
+            <input
+              type="text"
+              {...register('photo', { required: 'Photo field is required' })}
+              className="input"
+              placeholder="Photo URL"
+            />
+            {errors.photo && (
+              <p className="text-red-500">{errors.photo.message}</p>
+            )}
+          </fieldset>
+
+          {/* Email */}
+          <fieldset className="fieldset">
+            <legend className="fieldset-legend text-[16px]">Email</legend>
+            <input
+              type="email"
+              {...register('email', { required: 'Email field is required' })}
+              className="input"
+              placeholder="Type your email"
+            />
+            {errors.email && (
+              <p className="text-red-500">{errors.email.message}</p>
+            )}
+          </fieldset>
+
+          {/* Password */}
+          <fieldset className="fieldset relative">
+            <legend className="fieldset-legend text-[16px]">Password</legend>
+
+            <input
+              type={isShowPassword ? 'text' : 'password'}
+              {...register('password', {
+                required: 'Password field is required',
+                minLength: {
+                  value: 6,
+                  message: 'Minimum 6 characters required',
+                },
+              })}
+              className="input"
+              placeholder="Type your password"
+            />
+
+            <span
+              className="absolute right-2 top-4 cursor-pointer"
+              onClick={() => setIsShowPassword(!isShowPassword)}
+            >
+              {isShowPassword ? (
+                <FaEye className="text-lg text-orange-600" />
+              ) : (
+                <FaEyeSlash className="text-lg text-orange-600" />
+              )}
+            </span>
+
+            {errors.password && (
+              <p className="text-red-500">{errors.password.message}</p>
+            )}
+          </fieldset>
+
+          {/* Register Button */}
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="btn bg-orange-400 text-white w-full hover:bg-orange-500 transition"
+          >
+            {isSubmitting ? 'Registering...' : 'Register'}
+          </button>
+
+          {/* Google Button */}
+          <button
+            type="button"
+            onClick={handleGoogleSignin}
+            className="btn bg-blue-500 text-white w-full hover:bg-blue-600 transition"
+          >
+            Signup with Google
+          </button>
+
+        </form>
+      </div>
+    </div>
+  );
 };
 
 export default RegisterPage;
