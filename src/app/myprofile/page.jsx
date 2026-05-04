@@ -60,7 +60,7 @@ export default function MyProfile() {
               alt="profile"
               width={25}
               height={25}
-              className="rounded-full border-4 border-orange-400 object-cover"
+              className="w-24 h-24 rounded-full border-4 border-orange-400 object-cover"
             />
           ) : (
             <div className="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center text-xl">
