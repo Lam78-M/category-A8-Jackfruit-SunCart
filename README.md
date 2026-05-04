@@ -29,10 +29,16 @@ The goal of this project is to build a fully responsive, authentication-based eC
 * **Animate.css (Animations)**
 * **Unsplash (Images)**
 * **Toast (Show short toast)**
+* **React-fast-marquee**
 
 ---
 
-## ✨ Key Features
+##  🛒 Core Features
+  🌞 Summer-themed modern eCommerce interface
+  🧾 Product listing from JSON data
+  🔍 Detailed product view with rich UI
+ ⚡ Fast navigation using Next.js App Router
+
 
 ### 🔐 Authentication System
 
@@ -102,6 +108,7 @@ Sensitive keys (e.g., authentication config) are stored securely using environme
 * better-auth
 * animate.css
 * react toast
+* react-fast-marquee
 
 ## 📌 GitHub Repository
 
