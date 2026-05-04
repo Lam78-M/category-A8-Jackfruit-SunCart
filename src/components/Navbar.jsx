@@ -12,63 +12,75 @@ const Navbar = () => {
   const user = session?.user;
 
   return (
-    <div className='bg-base-100 shadow-sm w-full'>
-      <div className="navbar">
+    <div className="bg-base-100 shadow-sm w-full">
+      <div className="navbar max-w-7xl mx-auto px-2">
 
+        {/* LEFT */}
         <div className="navbar-start">
 
+          {/* MOBILE MENU */}
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
               </svg>
             </div>
-            <ul tabIndex="-1" className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow text-lg text-black">
-              <div className='flex items-center gap-1 hover:text-orange-400'>
-                <FaHome />
-                <Link href={'/'}>Home</Link>
-              </div>
-              <div className='flex items-center gap-1 hover:text-orange-400'>
-                <AiFillProduct />
-                <Link href={'/products'}>Products</Link>
-              </div>
-              <div className='flex items-center gap-1 hover:text-orange-400'>
-                <FaRegUser />
-                <Link href={'/myprofile'}>My Profile</Link>
-              </div>
+
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-56 text-base"
+            >
+              <li>
+                <Link href="/" className="flex items-center gap-2">
+                  <FaHome /> Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/products" className="flex items-center gap-2">
+                  <AiFillProduct /> Products
+                </Link>
+              </li>
+              <li>
+                <Link href="/myprofile" className="flex items-center gap-2">
+                  <FaRegUser /> My Profile
+                </Link>
+              </li>
             </ul>
           </div>
 
-   
-          <a className="flex items-center gap-2 text-2xl font-bold text-orange-400 ml-2">
-            <IoSunny className='text-orange-400 text-3xl' />
-            SUN <span className='text-gray-800 font-bold'>CART</span>
-          </a>
+          {/* LOGO */}
+          <Link href="/" className="flex items-center gap-2 text-2xl font-bold ml-2">
+            <IoSunny className="text-orange-400 text-3xl" />
+            <span className="text-orange-400">SUN</span>
+            <span className="text-gray-800">CART</span>
+          </Link>
         </div>
 
-        
-        <div className="navbar-center">
-          <ul className="hidden lg:flex menu menu-horizontal px-1 text-lg text-gray-800">
-            <div className='flex gap-5'>
-              <div className='flex items-center gap-1 hover:text-orange-400'>
-                <FaHome />
-                <Link href={'/'}>Home</Link>
-              </div>
-              <div className='flex items-center gap-1 hover:text-orange-400'>
-                <AiFillProduct />
-                <Link href={'/products'}>Products</Link>
-              </div>
-              <div className='flex items-center gap-1 hover:text-orange-400'>
-                <FaRegUser />
-                <Link href={'/myprofile'}>My Profile</Link>
-              </div>
-            </div>
+        {/* CENTER (DESKTOP MENU) */}
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 text-lg gap-5">
+            <li>
+              <Link href="/" className="flex items-center gap-2 hover:text-orange-400 transition">
+                <FaHome /> Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/products" className="flex items-center gap-2 hover:text-orange-400 transition">
+                <AiFillProduct /> Products
+              </Link>
+            </li>
+            <li>
+              <Link href="/myprofile" className="flex items-center gap-2 hover:text-orange-400 transition">
+                <FaRegUser /> My Profile
+              </Link>
+            </li>
           </ul>
         </div>
 
-     
+        {/* RIGHT */}
         <div className="navbar-end">
-          <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row items-center gap-2 mr-3">
+          <div className="flex items-center gap-2">
+
             {isPending ? (
               <span className="loading loading-spinner text-secondary"></span>
             ) : user ? (
@@ -80,8 +92,9 @@ const Navbar = () => {
                   height={40}
                   className="rounded-full object-cover"
                 />
+
                 <button
-                  className="btn bg-white text-orange-500 border border-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300"
+                  className="btn btn-md bg-white px-5 text-orange-500 border border-orange-500 hover:bg-orange-500 hover:text-white transition"
                   onClick={async () => await authClient.signOut()}
                 >
                   Logout
@@ -89,11 +102,12 @@ const Navbar = () => {
               </>
             ) : (
               <Link href="/login">
-                <button className="btn bg-white text-orange-500 border border-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300">
-                  Login with Email
+                <button className="btn btn-md bg-white px-5 text-orange-500 border border-orange-500 hover:bg-orange-500 hover:text-white transition">
+                  Login
                 </button>
               </Link>
             )}
+
           </div>
         </div>
 
