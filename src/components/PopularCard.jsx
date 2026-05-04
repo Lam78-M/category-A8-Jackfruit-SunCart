@@ -9,7 +9,12 @@ import Link from 'next/link';
 const PopularCard = () => {
     return (
         <div>
-                   <h2 className="text-4xl font-semibold text-amber-700 text-center">Our Popular Products</h2>
+                   <div className="text-center mb-8">
+  <h2 className="text-4xl font-bold text-amber-700 tracking-wide relative inline-block">
+    Our Popular Products
+    <span className="block h-1 w-24 bg-amber-500 mx-auto mt-2 rounded-full"></span>
+  </h2>
+</div>
                 <div className="w-full sm:w-[60%] md:w-[60%] lg:w-[40%] mx-auto mt-3">
               <hr className="border-t border-amber-700 opacity-15" />
             </div>

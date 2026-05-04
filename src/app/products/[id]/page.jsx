@@ -38,7 +38,7 @@ export  default async function ProductDetails({ params }) {
   <div className="flex flex-wrap gap-3 mt-3">
 
     <span className="px-3 py-1 text-sm bg-amber-200 text-amber-800 rounded-full font-medium">
-      📦 {product.category}
+       {product.category}
     </span>
 
     <span className={`px-3 py-1 text-sm rounded-full font-medium 

@@ -14,7 +14,7 @@ The goal of this project is to build a fully responsive, authentication-based eC
 
 ## 🚀 Live URL
 
-🔗 https://your-live-link.vercel.app
+🔗 https://category-a8-jackfruit-sun-cart-szdc.vercel.app
 
 ---
 
