@@ -1,3 +1,7 @@
+<p>
+  <img src="Screenshot 2026-07-09 191120.png" />
+</p>
+
 # 🌞 SunCart – Summer Essentials Store
 
 ## 📌 Project Overview
